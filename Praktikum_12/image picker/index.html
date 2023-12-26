@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function image_picker(){
+            const daftar_gambar = ["kelinci.png", "kucing.png", "kuda.png", "tikus.png", "kupu-kupu.png", "gajah.png"];
+            let pilihan = document.getElementById("option").value;
+
+            if( pilihan == "kelinci"){
+                let select = daftar_gambar[0];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "kucing"){
+                let select = daftar_gambar[1];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "kuda"){
+                let select = daftar_gambar[2];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "tikus"){
+                let select = daftar_gambar[3];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "kupu-kupu"){
+                let select = daftar_gambar[4];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "gajah"){
+                let select = daftar_gambar[5];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar :</option>
+        <option value="kelinci"> Kelinci </option>
+        <option value="kucing"> Kucing </option>
+        <option value="kuda"> Kuda </option>
+        <option value="tikus"> Tikus </option>
+        <option value="kupu-kupu"> Kupu-Kupu </option>
+        <option value="gajah"> Gajah </option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" >
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Authentication</title>
+</head>
+<body>
+    <!-- Kerangka kerja html -->
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="login()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <input type="submit" value="Login">
+        <input type="reset" value="Batal">
+    </form>
+
+    <!-- Program yang dijalankan oleh javascript -->
+    <script>
+        function login(){
+            //mengambil nilai username dan password dari form
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+            let form = document.getElementById("loginForm"); //redirect ke web berbeda
+
+            //memeriksa apakah username dan password sesuai dengan yang ditentukan
+            if (user == "hilmy" && pass == "12345678"){
+                alert("Login Berhasil");
+                form.setAttribute("action", "c:\\xampp\htdocs\Muhamad_Hilmy\PW_1\Praktikum_08"); //redirect ke web berbeda
+            }
+            else if (user == "rasin" && pass == "rahasia"){
+                alert("Login Sukses");
+                form.setAttribute("action", "c:\\xampp\htdocs\Muhamad_Hilmy\PW_1\Praktikum_08"); //redirect ke web berbeda
+            }
+            else {
+                alert("Login Gagal, Coba Lagi!");
+            }
+        }
+    </script>    
+</body>
+</html>
